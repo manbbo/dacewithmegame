@@ -7,17 +7,6 @@ public class ButtonHandler : MonoBehaviour
 {
     public GameObject[] obj;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void btExit()
     {
         Application.Quit();
@@ -38,5 +27,11 @@ public class ButtonHandler : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+    }
+
+    public void CloseDialog()
+    {
+        FixedThings.prompting = false;
+        obj[2].SetActive(false);
     }
 }

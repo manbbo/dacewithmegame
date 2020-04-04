@@ -13,7 +13,7 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!FixedThings.paused || !FixedThings.prompting)
+        if (!FixedThings.paused && !FixedThings.prompting)
         {
 
         }
