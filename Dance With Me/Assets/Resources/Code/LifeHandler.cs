@@ -22,9 +22,9 @@ public class LifeHandler : MonoBehaviour
             listLifeObject.Add(life);
 
             life.SetActive(true);
-            life.GetComponent<RectTransform>().sizeDelta = new Vector3(2f, 2f, 2f);
+            life.GetComponent<RectTransform>().sizeDelta = new Vector3(2.5f, 2.5f, 2.5f);
             life.transform.parent = menuToGetTransform.transform;
-            life.transform.position = new Vector3(-7.79f + (1.0f * i), -4.12f, 0.0f);
+            life.transform.position = new Vector3(-7.9f + (1.20f * i), -4.12f, 0.0f);
         }
     }
 

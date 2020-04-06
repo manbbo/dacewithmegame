@@ -34,38 +34,30 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     // Function to be used by a button
-    public void Interact(bool isJumporCrouch)
+    public void Interact(string boolName)
     {
-        ///////////// change button scheme to a touch scheme
         if (!FixedThings.paused && !FixedThings.prompting)
         {
             if (!pressedSomething)
             {
-                if (isJumporCrouch)
-                {
-                    boolName = "isJumping";
+                this.boolName = boolName;
                     animator.SetBool(boolName, true);
-                    boolState = animator.GetBool(boolName);
+                    this.boolState = animator.GetBool(boolName);
 
                     pressedSomething = true;
 
                     GetState.avoided = true;
-                    GetState.crouched = false;
-                    GetState.jumped = true;
-                }
-                else
+
+                if (this.boolName == "isCrouching")
                 {
-                    boolName = "isCrouching";
-                    animator.SetBool(boolName, true);
-                    boolState = animator.GetBool(boolName);
-
-                    pressedSomething = true;
-
-                    GetState.avoided = true;
                     GetState.crouched = true;
                     GetState.jumped = false;
                 }
-                
+                else if (this.boolName == "isJumping")
+                {
+                    GetState.crouched = false;
+                    GetState.jumped = true;
+                }
             }
         }
     }
