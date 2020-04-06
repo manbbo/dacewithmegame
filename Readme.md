@@ -14,5 +14,7 @@ Made using unity, so if you want to modify and create your own pushs to be appro
 
 Having a bug to use the virtual buttons - they only do something when the idling animation is not completed yet
 
+# Download Link of the Alpha Application:
+https://manbbo.itch.io/dwmod
 
 //////
